@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 220px auto;
+            grid-template-rows: 150px 1fr auto;
+            min-height: 100vh;
+        }
+
+        .header {
+			
+            grid-row: 1;
+            grid-column: 1 / span 2;
+            background-color: royalblue;
+            color: white;
+            padding: 10px;
+            text-align: left;
+			display: flex;
+            align-items: center;
+            
+        }
+		
+		#time{
+			font-size: 20px;
+			color: white;
+			margin-left: 200px;
+			font-family: sans-serif;
+			
+			
+		}
+
+        .logo img {
+            width: 150px;
+            margin-right: 20px;
+        }
+
+        .title h1 {
+            margin: 0;
+        }
+
+        .side-menu {
+            grid-column: 1;
+            grid-row: 2 / span 3;
+            background-color: lightblue;
+            padding: 20px;
+            color: white;
+        }
+
+        .side-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        .side-menu ul li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .content {
+            grid-row: auto;
+            grid-column: 2;
+            padding: 20px;
+            background-color: whitesmoke;
+        }
+		
+		.content h2{ color: blue;}
+		
+		.content p{ text-align: center;}
+
+        .footer {
+            grid-row: 3;
+            grid-column: 2;
+            background-color: grey;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+    
+<body>
+  <div class="header">
+        <div class="logo">
+            <a href="home%20page.html"><img src="logo.png" alt="Company Logo"></a>
+        </div>
+        <div class="title">
+            <h1>Jakson's Pet Adoption Center</h1>
+		
+        </div>
+		<div id = "time"> </div>
+    </div>
+
+    <div class="side-menu">
+        <p style="text-align: center; font-size: 22px"><u>Menu</u></p>
+         <ul>
+            <li><a href="home%20page.html">Home page</a></li>
+            <li><a href="Browse%20available%20pets.html">Browse Available Pets</a></li>
+            <li><a href="find%20a%20cat%20or%20dog.html">Find a dog/cat</a></li>
+            <li><a href="dog%20care.html">Dog Care</a></li>
+            <li><a href="cat%20care.html">Cat Care</a></li>
+            <li><a href="have%20a%20pet%20to%20give%20away.html">Have a pet to give away</a></li>
+            <li><a href="Contact%20Us.html">Contact Us</a></li>
+        </ul>
+    </div>
+    
+    <div class="content">
+        <h2>Contact Us</h2><br>
+        <p><b>Name:</b> Jakson </p><br>
+        <p><b>Student ID:</b> 12345678</p><br>
+        <p><b>Email:</b> jakson@gmail.com</p><br>
+    </div>
+
+    <div class="footer">
+        <p><a href="Privacy%20Statement.html">Privacy/Disclaimer Statement</a></p>
+    </div>
+
+    <script>
+        function getCurrentDate() {
+			const currentDate = new Date();
+    		const options = { weekday: "long" , month: "long", day: "numeric", year: "numeric", hour: "numeric", minute:"numeric", second: "numeric"};
+    		document.getElementById("time").innerHTML = currentDate.toLocaleDateString("en-US", options);
+		
+        
+        }
+		getCurrentDate();
+    	setInterval(getCurrentDate, 1000);
+    </script>
+
+</body>
+</html>

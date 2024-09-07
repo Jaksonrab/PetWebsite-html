@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Have a Pet to Give Away</title>
+
+	<style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 220px auto;
+            grid-template-rows: 150px 1fr auto;
+            min-height: 100vh;
+        }
+
+        .header {
+            grid-row: 1;
+            grid-column: 1 / span 2;
+            background-color: royalblue;
+            color: white;
+            padding: 10px;
+            text-align: left;
+			display: flex;
+            align-items: center;
+            
+        }
+		
+		#time{
+			font-size: 20px;
+			color: white;
+			margin-left: 200px;
+			font-family: sans-serif;
+		}
+		
+
+        .logo img {
+            width: 150px;
+            margin-right: 20px;
+        }
+
+        .title h1 {
+            margin: 0;
+        }
+
+        .side-menu {
+            grid-column: 1;
+            grid-row: 2 / span 3;
+            background-color: lightblue;
+            padding: 20px;
+            color: white;
+        }
+
+        .side-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        .side-menu ul li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .content {
+            grid-row: auto;
+            grid-column: 2;
+            padding: 20px;
+            background-color: whitesmoke;
+        }
+		
+		.content h2{ color: blue;}
+
+        .footer {
+            grid-row: 3;
+            grid-column: 2;
+            background-color: grey;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+        <div class="header">
+            <div class="logo">
+                <a href="home%20page.html"><img src="logo.png" alt="Company Logo"></a>
+            </div>
+            <div class="title">
+                <h1>Jakson's Pet Adoption Center</h1>
+            
+            </div>
+            <div id="time"> </div>
+        </div>
+
+    <div class="side-menu">
+        <p style="text-align: center; font-size: 22px"><u>Menu</u></p>
+       <ul>
+            <li><a href="home%20page.html">Home page</a></li>
+            <li><a href="Browse%20available%20pets.html">Browse Available Pets</a></li>
+            <li><a href="find%20a%20cat%20or%20dog.html">Find a dog/cat</a></li>
+            <li><a href="dog%20care.html">Dog Care</a></li>
+            <li><a href="cat%20care.html">Cat Care</a></li>
+            <li><a href="have%20a%20pet%20to%20give%20away.html">Have a pet to give away</a></li>
+            <li><a href="Contact%20Us.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+
+<div class = "content">
+<h2>Have a Pet to Give Away</h2>
+<form id="giveAwayForm">
+    <fieldset>
+        <label>Pet Type:</label><br>
+        <input type="radio" id="dog" name="petType" value="Dog">
+        <label for="dog">Dog</label>
+        <input type="radio" id="cat" name="petType" value="Cat">
+        <label for="cat">Cat</label><br><br>
+        
+        <label for="breedname">Breed name:</label>
+        
+		<input type="text" id="breedname" name="breedname">
+        <input type="radio" id="mixbreed" name="breed" value="Mix"> 
+		
+		<label for="mixbreed">Mix Breed</label>
+		<input type="radio" id="notmixed" name="breed" value="NotMixed">
+		<label for="notmixed"> Not Mixed Breed </label>
+		<br><br>
+		
+        
+        <label for="age">Age:</label>
+        <select id="age" name="age">
+            <option value="baby">Baby (6-15 months) </option>
+            <option value="adolescent">Adolescent (16-36 months)</option>
+            <option value="adult">Adult (3-6 years old)</option>
+            <option value="senior">Senior (7+ years old)</option>
+        </select><br><br>
+        
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label><br><br>
+        
+        <label for="compatibilityDogs">Gets along with other dogs:</label>
+        <input type="checkbox" id="compatibilityDogs" name="compatibilityAdopted[]" value="Compatible with dogs"><br>
+        
+        <label for="compatibilityCats">Gets along with other cats:</label>
+        <input type="checkbox" id="compatibilityCats" name="compatibilityAdopted[]" value="Compatible with cats"><br>
+        
+        <label for="compatibilityChildren">Suitable for small children:</label>
+        <input type="checkbox" id="compatibilityChildren" name="compatibilityAdopted[]" value="Compatible with children"><br><br>
+        
+        <label for="comment">Comment:</label><br>
+        <textarea id="comment" name="comment" rows="6" cols="60"></textarea><br><br>
+        
+        <label>Owner's Name:</label><br>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName"><br><br>
+        <label for="familyName">Family Name:</label>
+        <input type="text" id="familyName" name="familyName"><br><br>
+        
+        <label for="ownerEmail">Owner's Email:</label><br>
+        <input type="email" id="ownerEmail" name="ownerEmail"><br><br>
+        
+        <button type="submit">Submit</button>
+        <button type="reset">Clear</button>
+    </fieldset>
+</form>
+ </div>
+	
+	  <div class="footer">
+        <p><a href="Privacy%20Statement.html">Privacy/Disclaimer Statement</a></p>
+	</div>
+    
+    <script>
+        //part 1: getting the time
+function getCurrentDate() {
+    const currentDate = new Date();
+    const options = { weekday: "long" , month: "long", day: "numeric", year: "numeric", hour: "numeric", minute:"numeric", second: "numeric"};
+    document.getElementById("time").innerHTML = currentDate.toLocaleDateString("en-US", options);
+
+
+}
+getCurrentDate();
+setInterval(getCurrentDate, 1000);
+
+
+//part 4: putting up a pet
+document.getElementById("giveAwayForm").addEventListener("submit", function(event) {
+
+
+const petType = document.querySelector('input[name="petType"]:checked');
+const breedName = document.getElementById("breedname").value;
+const breed = document.querySelector('input[name="breed"]:checked');
+const age = document.getElementById("age").value;
+const gender = document.querySelector('input[name="gender"]:checked');
+const compatibility = document.querySelectorAll('input[name="compatibilityAdopted[]"]:checked');
+const comment = document.getElementById("comment").value;
+const firstName = document.getElementById("firstName").value;
+const familyName = document.getElementById("familyName").value;
+const ownerEmail = document.getElementById("ownerEmail").value;
+
+if (!petType || !breedName || !breed || !age || !gender || compatibility.length === 0 || !firstName || !familyName || !ownerEmail) {
+alert("Please fill in each section.");
+event.preventDefault();
+}
+});
+    </script>
+</body>
+</html>

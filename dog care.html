@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Care</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 220px auto;
+            grid-template-rows: 150px 1fr auto;
+            min-height: 100vh;
+        }
+
+        .header {
+            grid-row: 1;
+            grid-column: 1 / span 2;
+            background-color: royalblue;
+            color: white;
+            padding: 10px;
+            text-align: left;
+			display: flex;
+            align-items: center;
+            
+        }
+		
+		#time{
+			font-size: 20px;
+			color: white;
+			margin-left: 200px;
+			font-family: sans-serif;
+	
+		}
+
+        .logo img {
+            width: 150px;
+            margin-right: 20px;
+        }
+
+        .title h1 {
+            margin: 0;
+        }
+
+        .side-menu {
+            grid-column: 1;
+            grid-row: 2 / span 3;
+            background-color: lightblue;
+            padding: 20px;
+            color: white;
+        }
+
+        .side-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        .side-menu ul li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .content {
+            grid-row: auto;
+            grid-column: 2;
+            padding: 20px;
+            background-color: whitesmoke;
+        }
+		
+		.content h2{ color: blue;}
+
+        .footer {
+            grid-row: 3;
+            grid-column: 2;
+            background-color: grey;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+   <div class="header">
+        <div class="logo">
+            <a href="home%20page.html"><img src="logo.png" alt="Company Logo"></a>
+        </div>
+        <div class="title">
+            <h1>Jakson's Pet Adoption Center</h1>
+		
+        </div>
+		<div id="time"> </div>
+    </div>
+
+    <div class="side-menu">
+        <p style="text-align: center; font-size: 22px"><u>Menu</u></p>
+        <ul>
+            <li><a href="home%20page.html">Home page</a></li>
+            <li><a href="Browse%20available%20pets.html">Browse Available Pets</a></li>
+            <li><a href="find%20a%20cat%20or%20dog.html">Find a dog/cat</a></li>
+            <li><a href="dog%20care.html">Dog Care</a></li>
+            <li><a href="cat%20care.html">Cat Care</a></li>
+            <li><a href="have%20a%20pet%20to%20give%20away.html">Have a pet to give away</a></li>
+            <li><a href="Contact%20Us.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h2>Dog Care</h2>
+		<p style="color: red"> **All of the following information was taken directly from <a style ="color: red" href=https://animalfoundation.com/whats-going-on/blog/basic-necessities-proper-pet-care> The Animal Foundation</a>** </p>
+        <h3> Food</h3>
+        <blockquote>Don’t forget to give pets the right amount of food, too! Overfeeding your pet or giving him too many treats could lead to obesity, which could consequently trigger more health problems such as heart disease, renal problems, and more. Weigh your options when it comes to pet food to avoid these kinds of illnesses — and if you don’t exactly know what foods are best for your pet, it’s a great idea to ask the opinion of your vet!</blockquote>
+		
+		<h3> Exercise</h3>
+		<blockquote > Exercise is an important part of your pet’s mental, as well as physical, health. If you spend any time on social media, you know that all kinds of animals like to play such as this ball-playing turtle, this dog playing fetch by himself or this bird playing with a red cup. What some people consider misbehavior in a pet is just the pet getting bored an amusing itself by getting in the garbage or tearing up the couch or…well you get the idea.</blockquote>
+		
+		<h3> Health Habits</h3>
+	<blockquote> To ensure that your pets are healthy and nimble, you should take them to a local, trusted veterinarian for wellness check-ups at least once a year. Clean teeth and healthy gums also play an important role in your pet’s health.  If your furry friend is showing signs or symptoms of being sick, take them to your vet or animal hospital right away to get them feeling better sooner rather than later!</blockquote>
+		
+	
+    </div>
+	
+
+
+
+
+    <div class="footer">
+        <p><a href="Privacy%20Statement.html">Privacy/Disclaimer Statement</a></p>
+    </div>
+
+    <script>
+        function getCurrentDate() {
+			const currentDate = new Date();
+    		const options = { weekday: "long" , month: "long", day: "numeric", year: "numeric", hour: "numeric", minute:"numeric", second: "numeric"};
+    		document.getElementById("time").innerHTML = currentDate.toLocaleDateString("en-US", options);
+		
+        
+        }
+		getCurrentDate();
+    	setInterval(getCurrentDate, 1000);
+    </script>
+
+</body>
+
+</html>

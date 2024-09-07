@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Browse Available Pets</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 220px auto;
+            grid-template-rows: 150px 1fr auto;
+            min-height: 100vh;
+        }
+        .header {
+            grid-row: 1;
+            grid-column: 1 / span 2;
+            background-color: royalblue;
+            color: white;
+            padding: 10px;
+            text-align: left;
+			display: flex;
+            align-items: center;   
+        }
+
+		.circle {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%; /* Make it circular */
+        border: 2px solid black; /* Add border */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+		
+	
+    .header {
+            grid-row: 1;
+            grid-column: 1 / span 2;
+            background-color: royalblue;
+            color: white;
+            padding: 10px;
+            text-align: left;
+			display: flex;
+            align-items: center;
+
+        }
+		#time{
+			font-size: 20px;
+			color: white;
+			margin-left: 200px;
+			font-family: sans-serif;
+			
+			
+		}
+		
+
+        .logo img {
+            width: 150px;
+            margin-right: 20px;
+        }
+
+        .side-menu {
+            grid-column: 1;
+            grid-row: 2 / span 3;
+            background-color: lightblue;
+            padding: 20px;
+            color: white;
+        }
+
+        .side-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        .side-menu ul li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .content {
+            grid-row: auto;
+            grid-column: 2;
+            padding: 20px;
+            background-color: whitesmoke;
+        }
+		
+		.content img{
+			
+			margin-top: 40px;
+			margin-bottom: 40px;
+			float: left;
+			width: 50%;
+			height: auto;
+			border: solid royalblue 3px;
+		}
+
+		.content p{
+			text-align: center;
+			font-size: 20px;
+			font-family: sans-serif;
+		}
+		
+		.content h2{
+			text-align: center;
+			font-size: 25px;
+			font-family: sans-serif;
+		}
+        .footer {
+            grid-row: 3;
+            grid-column: 2;
+            background-color: grey;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="home%20page.html"><img src="logo.png" alt="Company Logo"></a>
+        </div>
+        <div class="title">
+            <h1>Jakson's Pet Adoption Center</h1>
+		
+        </div>
+		<div id="time"> </div>
+    </div>
+
+    <div class="side-menu">
+        <p style="text-align: center; font-size: 22px"><u>Menu</u></p>
+     <ul>
+            <li><a href="home%20page.html">Home page</a></li>
+            <li><a href="Browse%20available%20pets.html">Browse Available Pets</a></li>
+            <li><a href="find%20a%20cat%20or%20dog.html">Find a dog/cat</a></li>
+            <li><a href="dog%20care.html">Dog Care</a></li>
+            <li><a href="cat%20care.html">Cat Care</a></li>
+            <li><a href="have%20a%20pet%20to%20give%20away.html">Have a pet to give away</a></li>
+            <li><a href="Contact%20Us.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        
+		<h1> Dogs </h1>
+			
+			<img src="bulldog.jpeg" alt = "bulldog">
+		
+				<br><br><br> <h2>Bobo</h2><br> <br>
+				<p> Age : 3 years <br><br> Gender: Female  <br><br> Gets along with only cats <br><br>  Lazy and Quiet </p><br>
+				<p> <button> Interested </button></p>
+
+		<img src ="Chihuahua.jpeg" alt="Chihuahua">
+		
+		<br><br><br><br><br><h2> Jx </h2><br><br>
+				<p> Age : 1 year <br><br> Gender: Male <br><br> Doesn't get along with others <br><br> Active </p><br>
+				<p> <button> Interested </button></p>
+		
+		<img src="beagle.jpeg" alt ="Beagle">
+		
+		<br><br> <br><br><br><br><br><br><br><br><br><h2>T-Bear</h2><br><br>
+				<p> Age : 3 months <br><br> Gender: Male <br><br> Gets along with children <br><br> Energetic </p><br>
+				<p> <button> Interested </button></p>
+		
+		
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		
+		<h1> Cats </h1>
+        
+		<img src="britishshorthair.jpeg" alt ="british_shorthair">
+		
+<br><br> <h2> G </h2><br> <br>
+				<p> Age : 1 year <br><br> Gender: Female <br><br> Gets along with cats, dogs and children<br><br> Lazy and Cuddly </p><br>
+				<p> <button> Interested </button></p>
+		
+		
+		<img src ="sphynx.jpeg" alt="Sphynx">
+		
+<br><br><br><br><br><br><br><br><br><br><br><br>
+		<h2>Naf </h2><br><br>
+				<p> Age : 4 years <br><br> Gender: Female <br><br> Gets along with cats and children <br><br>  Intelligent</p> <br>
+				<p> <button> Interested </button></p>
+		
+		<img src = "tabby.jpeg" alt = "Tabby">
+        <br><br> <br><br><br><br><br><br><br><br><br><br><br>
+		<h2>Moon</h2><br><br>
+				<p> Age : 2 years <br><br> Gender: Male <br><br> Gets along with cats, dogs and children <br><br> Active and Energetic </p><br>
+				<p> <button> Interested </button></p>
+		
+    </div>
+
+    <div class="footer">
+        <p><a href="Privacy%20Statement.html">Privacy/Disclaimer Statement</a></p>
+    </div>
+	
+    <script>
+        function getCurrentDate() {
+			const currentDate = new Date();
+    		const options = { weekday: "long" , month: "long", day: "numeric", year: "numeric", hour: "numeric", minute:"numeric", second: "numeric"};
+    		document.getElementById("time").innerHTML = currentDate.toLocaleDateString("en-US", options);
+		
+        
+        }
+		getCurrentDate();
+    	setInterval(getCurrentDate, 1000);
+    </script>
+
+</body>
+
+</html>

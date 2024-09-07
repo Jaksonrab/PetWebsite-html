@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a cat/dog</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 220px auto;
+            grid-template-rows: 150px 1fr auto;
+            min-height: 100vh;
+        }
+
+        .header {
+            grid-row: 1;
+            grid-column: 1 / span 2;
+            background-color: royalblue;
+            color: white;
+            padding: 10px;
+            text-align: left;
+			display: flex;
+            align-items: center;
+
+        }
+		#time{
+			font-size: 20px;
+			color: white;
+			margin-left: 200px;
+			font-family: sans-serif;	
+			
+		}
+
+        .logo img {
+            width: 150px;
+            margin-right: 20px;
+        }
+
+        .title h1 {
+            margin: 0;
+        }
+
+        .side-menu {
+            grid-column: 1;
+            grid-row: 2 / span 3;
+            background-color: lightblue;
+            padding: 20px;
+            color: white;
+        }
+
+        .side-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        .side-menu ul li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .content {
+            grid-row: auto;
+            grid-column: 2;
+            padding: 20px;
+            background-color: whitesmoke;
+        }
+		
+		.content h2{ color: blue;}
+
+        .footer {
+            grid-row: 3;
+            grid-column: 2;
+            background-color: grey;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="home%20page.html"><img src="logo.png" alt="Company Logo"></a>
+        </div>
+        <div class="title">
+            <h1>Jakson's Pet Adoption Center</h1>
+		
+        </div>
+		<div id="time"> </div>
+    </div>
+
+    <div class="side-menu">
+        <p style="text-align: center; font-size: 22px"><u>Menu</u></p>
+         <ul>
+            <li><a href="home%20page.html">Home page</a></li>
+            <li><a href="Browse%20available%20pets.html">Browse Available Pets</a></li>
+            <li><a href="find%20a%20cat%20or%20dog.html">Find a dog/cat</a></li>
+            <li><a href="dog%20care.html">Dog Care</a></li>
+            <li><a href="cat%20care.html">Cat Care</a></li>
+            <li><a href="have%20a%20pet%20to%20give%20away.html">Have a pet to give away</a></li>
+            <li><a href="Contact%20Us.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+		
+		<h2>Find a Pet</h2>
+        <form id="petSearchForm">
+            <fieldset>
+                <legend>Pet Type:</legend>
+                <input type="radio" id="dog" name="petType" value="Dog">
+                <label for="dog">Dog</label>
+                <input type="radio" id="cat" name="petType" value="Cat">
+                <label for="cat">Cat</label>
+            </fieldset>
+            <br>
+<fieldset>
+	<legend> Details: </legend>
+            <label for="breed">Breed:</label>
+            <select id="breed" name="Breed">
+                <option value="German Shepherd (Dog)">German Shepherd (Dog)</option>
+                <option value="Bulldog (Dog)">Bulldog (Dog)</option>
+                <option value="Australian Shepherd (Dog)">Australian Shepherd (Dog)</option>
+                <option value="Golden Retriever (Dog)">Golden Retriever (Dog)</option>
+                <option value="Labrador (Dog)">Labrador (Dog)</option>
+                <option value="Chihuahua (Dog)">Chihuahua (Dog)</option>
+                <option value="Border Collie (Dog)">Border Collie (Dog)</option>
+                <option value="Husky (Dog)">Husky (Dog)</option>
+                <option value="Poodle (Dog)">Poodle (Dog)</option>
+                <option value="Beagle (Dog)">Beagle (Dog)</option>
+                <option value="Siamese (Cat)">Siamese (Cat)</option>
+                <option value="Persian (Cat)">Persian (Cat)</option>
+                <option value="Maine Coon (Cat)">Maine Coon (Cat)</option>
+                <option value="Ragdoll (Cat)">Ragdoll (Cat)</option>
+                <option value="Bengal (Cat)">Bengal (Cat)</option>
+                <option value="Sphynx (Cat)">Sphynx (Cat)</option>
+                <option value="British Shorthair (Cat)">British Shorthair (Cat)</option>
+                <option value="Tabby (Cat)">Tabby (Cat)</option>
+                <option value="Mixed Cat (Cat)">Mixed Cat (Cat)</option>
+                <option value="Doesn't matter">Doesn't matter</option>
+            </select>
+            <br><br>
+
+            <label for="age">Preferred Age:</label>
+            <select id="age" name="Age">
+                <option value="Puppy/Kitten (6-15 months)">Puppy/Kitten (6-15 months)</option>
+                <option value="Adolescent (16-36 months)">Adolescent (16-36 months)</option>
+                <option value="Adult (3-6 years old)">Adult (3-6 years old)</option>
+                <option value="Senior (7+ years old)">Senior (7+ years old)</option>
+                <option value="Doesn't matter">Doesn't matter</option>
+            </select>
+            <br><br>
+
+            <label>Preferred Gender:</label><br>
+            <input type="radio" id="male" name="Gender" value="Male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="Gender" value="Female">
+            <label for="female">Female</label>
+            <input type="radio" id="anyGender" name="Gender" value="Doesn't Matter">
+            <label for="anyGender">Doesn't Matter</label>
+            <br><br>
+
+            <label>Compatibility:</label><br>
+            <input type="checkbox" id="compatibilityDog" name="Compatibility[]" value="Compatibility with Dogs">
+            <label for="compatibilityDog">Get along with other dogs</label><br>
+            <input type="checkbox" id="compatibilityCats" name="Compatibility[]" value="Compatibility with Cats">
+            <label for="compatibilityCats">Get along with other cats</label><br>
+            <input type="checkbox" id="compatibilityChildren" name="Compatibility[]" value="Compatibility with Children">
+            <label for="compatibilityChildren">Suitable for small children</label><br><br>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Clear">
+			</fieldset>
+        </form>
+    </div>
+
+    <div class="footer">
+        <p><a href="Privacy%20Statement.html">Privacy/Disclaimer Statement</a></p>
+    </div>
+
+    <script>
+        //part 1: getting the time
+        function getCurrentDate() {
+                    const currentDate = new Date();
+                    const options = { weekday: "long" , month: "long", day: "numeric", year: "numeric", hour: "numeric", minute:"numeric", second: "numeric"};
+                    document.getElementById("time").innerHTML = currentDate.toLocaleDateString("en-US", options);
+                
+                
+                }
+                getCurrentDate();
+                setInterval(getCurrentDate, 1000);
+        
+        
+        //part 3: finding a cat or dog
+        document.getElementById("petSearchForm").addEventListener("submit", function(event) {
+            
+        
+            const petType = document.querySelector('input[name="petType"]:checked');
+            const breed = document.getElementById("breed").value;
+            const age = document.getElementById("age").value;
+            const gender = document.querySelector('input[name="Gender"]:checked');
+            const compatibility = document.querySelectorAll('input[name="Compatibility[]"]:checked');
+        
+            if (!petType || !breed || !age || !gender || compatibility.length === 0) {
+                alert("Please fill in each section.");
+                event.preventDefault();
+            }
+        });
+            </script>
+</body>
+
+</html>
